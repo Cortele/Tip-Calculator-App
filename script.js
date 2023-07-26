@@ -1,5 +1,6 @@
 const resetBtn = document.querySelector('.hero-reset')
 const heroError = document.querySelector('.hero-error');
+const numberPeopleParagragh = document.querySelector('.number-people-paragragh')
 const dollarImgBill = document.querySelector('.dollar-img-bill');
 const dollarImgPeople = document.querySelector('.dollar-img-people');
 let billTotal = document.querySelector('.hero-bill');
@@ -14,7 +15,9 @@ tipOptions.forEach((option) => {
   option.addEventListener('click', (e) => {
     if (numberPeople.value == 0) {
       heroError.classList.remove('visible')
-      numberPeople.className = 'error'    
+      dollarImgPeople.classList.add('visible')
+      numberPeopleParagragh.classList.add('hero-error')
+      numberPeople.className = 'error'  
     } else {
     e.target.classList.toggle('fixed')
     e.target.classList.toggle('hero-options')
